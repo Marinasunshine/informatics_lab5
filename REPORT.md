@@ -50,9 +50,13 @@ git flow feature start task-management
 ```
 3. Создаём файл task_manager.py и напишем какой-нибудь простой скрипт:
 ```
+import random
+
 def create_task(title, description):
-    # Логика создания задачи
-    print(f"Создана новая задача: {title}")
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    equation = f"{a}x + {b} = {a + b}"
+    print(f"Создана новая задача: {equation}")
 ```
 4. Закоммитим изменения:
 ```
@@ -84,8 +88,12 @@ git flow hotfix start hotfix-1.0.1
 ```
 10. Создадим новый файл file_with_error.py и запишем туда "исправленный" код:
 ```
+import random
+
 def create_task(title, description):
-    # Логика создания задачи
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    equation = f"{a}x + {b} = {a + b}"
     print("Исправлена критическая ошибка")
 ```
 11. Закоммитим изменения:
@@ -102,8 +110,9 @@ git flow hotfix finish hotfix-1.0.1
 git push origin develop
 git push origin main
 ```
-По итогу работы ваши коммиты должны выглядеть подобным образом:
+В итоге мы имеем следующие коммиты:
+![image](https://github.com/user-attachments/assets/5529bff9-6592-4ab0-8bb7-dd8ea3fe9f15)
 
-
-**Вывод:** Был создан репозиторий и клонирован на виртуальную машину, была реализована автоматизация проверки формата файлов при коммите, а также сымитировано использование Git Flow в проекте.
+**Вывод:** 
+Был создан репозиторий и клонирован на локальную машину, была реализована автоматизация проверки формата файлов при коммите, а также сымитировано использование Git Flow.
 
